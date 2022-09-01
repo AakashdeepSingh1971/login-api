@@ -116,6 +116,6 @@ app.patch("/updateProfile", userModel, protect, async (req, res) => {
     res.json({ status: "ok", user, message: "User Profile Completed" });
 })
 
-app.listen(9002, () => {
+app.listen(process.env.PORT ||9002, () => {
     console.log("BE started at port 9002")
 })
